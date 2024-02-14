@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Change Form</title>
+    <link rel="stylesheet" href="status.html"> 
+
+    <style>
+      body {
+        
+        background-color: #f4f4f4;
+        background-image: url('linear 2.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #fff;
+        font-size: large;
+        font-family: 'Helvetica', 'Arial Narrow', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+}
+    
+
+      header{
+        padding: 0px;
+        margin: 10px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .left {
+        margin: 10px;
+        margin-bottom: 0%;
+        width: 85px;
+        height: auto;
+        margin-left: 10px;
+      }
+
+      .right {
+        margin: 10px;
+        margin-bottom: 0%;
+        width: 100px;
+        height: auto;
+        margin-left: 10px;
+      }
+
+      header p{
+        margin: 0;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      h1{
+        margin: 5px;
+        font-size: 30px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      h5{
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0px;
+        margin-top: 15px;
+        margin-left: 200px;
+      }
+
+      form {
+        display: -ms-inline-grid;
+        margin: 5px;
+        background-color: #660b0b88;;
+        padding: 18px;
+        border-radius: 8px;
+        max-width: 55%;
+        justify-content: center;
+        margin: auto;
+        
+      };
+      
+
+      fieldset {
+        border: 2px solid #ffffff;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+
+      legend {
+        font-weight: bold;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input {
+        padding: 5px;
+        border-radius: 5px;
+        margin: 3px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .formColumn {
+        display: flex;
+        flex-direction: row;
+        max-width: 400px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+      }
+
+      .inputGroup {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+        margin-top: 10px;
+        padding: 5px;
+      }
+
+      button {
+        font-size: 20px;
+        font-weight: bold;
+        width: 15%;
+        padding: 10px;
+        background-color: #800000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: auto;
+        display: block;
+      }
+  </style>
+</head>
+
+<body>
+    <header>
+        <img class="left" src="PUP LOGO.png" alt="PUP LOGO">
+        <div>
+            <p>REPUBLIC OF THE PHILIPPINES</p>
+            <h2>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h2>
+            <p>OFFICE OF THE VICE PRESIDENT FOR ACADEMIC AFFFAIRS <br> OPEN UNIVERSITY SYSTEM</p>
+        </div>
+        <img class="right" src="OUS LOGO.png" alt="OUS LOGO" >
+    </header>
+    <form method="post" action="https://script.google.com/macros/s/AKfycbxNSLYcYvwW_KhPa5o7fzkasIQUzHt6u46n86RrD5mr6W1UKZI5ZBh9RHEKwpy_wixc/exec">
+        <h1>APPLICATION FOR CHANGE OF ENROLLMENT (ACE)</h1>
+        <fieldset>
+            <legend>Choose your degree:</legend>
+            <label>
+                <input type="radio" name="program" value="bachelor" required>
+                Bachelor
+            </label>
+            <label>
+                <input type="radio" name="program" value="masters" required>
+                Masters
+            </label>
+            <label>
+                <input type="radio" name="program" value="doctorate" required>
+                Doctorate
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>I hereby apply for a change in my enrollment this:</legend>
+            <label>
+                <input type="radio" name="semester" value="first" required>
+                First Semester
+            </label>
+            <label>
+                <input type="radio" name="semester" value="second" required>
+                Second Semester
+            </label>
+            <label>
+                <input type="radio" name="semester" value="summer" required>
+                Summer
+            </label>
+        </fieldset>
+
+        <fieldset id="courseActionFieldset">
+          <legend>Please select the appropriate course and schedule:</legend>
+          <label>
+            <input type="radio" name="courseAction" value="change" required>
+            A. Course/s /Schedule to be CHANGED
+            <div class="formContainer hidden" id="changeForm">
+                <div class="formSection">
+                    <h5>FROM</h5>
+                    <div class="formColumn">
+                      <div class="inputGroup">
+                        <label for="changeyearSection1">Year and Section:</label>
+                        <input type="text" name="changeyearSection1" required>
+                        <input type="text" name="changeyearSection2" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="codeFrom">CODE:</label>
+                        <input type="text" name="code1" required>
+                        <input type="text" name="code2" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="courseTitleFrom">COURSE TITLE:</label>
+                        <input type="text" name="courseTitle1" required>
+                        <input type="text" name="courseTitle2" required>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="unitFrom">UNIT:</label>
+                        <input type="text" name="unit1" required>
+                        <input type="text" name="unit2" required>
+                    </div>
+                    </div>
+                </div>
+                <div class="formSection">
+                    <h5>TO</h5>
+                    <div class="formColumn">
+                      <div class="inputGroup">
+                        <label for="yearSectionTo">YEAR AND SECTION:</label>
+                        <input type="text" name="changeyearSectionTo1" required>
+                        <input type="text" name="changeyearSectionTo2" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="codeTo">CODE:</label>
+                        <input type="text" name="changecodeTo1" required>
+                        <input type="text" name="changecodeTo2" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="courseTitleTo">COURSE TITLE:</label>
+                        <input type="text" name="changecourseTitleTo1" required>
+                        <input type="text" name="changecourseTitleTo2" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="unitTo">UNIT:</label>
+                        <input type="text" name="changeunitTo1" required>
+                        <input type="text" name="changeunitTo2" required>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" name="courseAction" value="drop">
+            B. Course/s /Schedule to be DROPPED
+            <div class="formContainer hidden" id="dropForm">
+                <div class="formSection">
+                    <div class="formColumn">
+                      <div class="inputGroup">
+                        <label for="ByearSection">YEAR AND SECTION:</label>
+                        <input type="text" name="ByearSection1" required>
+                        <input type="text" name="ByearSection2" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="Bcode">CODE:</label>
+                        <input type="text" name="Bcode1" required>
+                        <input type="text" name="Bcode2" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="BcourseTitle">COURSE TITLE:</label>
+                        <input type="text" name="BcourseTitle1" required>
+                        <input type="text" name="BcourseTitle2" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="Bunit">UNIT:</label>
+                        <input type="text" name="Bunit1" required>
+                        <input type="text" name="Bunit2" required>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </label>
+
+          <label>
+            <input type="radio" name="courseAction" value="add">
+            C. Course/s /Schedule to be ADDED
+            <div class="formContainer hidden" id="addForm">
+                <div class="formSection">
+                    <div class="formColumn">
+                      <div class="inputGroup">
+                        <label for="CyearSection">YEAR AND SECTION:</label>
+                        <input type="text" name="CyearSection1" required>
+                        <input type="text" name="CyearSection2" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="Ccode">CODE:</label>
+                        <input type="text" name="Ccode1" required>
+                        <input type="text" name="Ccode2" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="courseTitle">COURSE TITLE:</label>
+                        <input type="text" name="CcourseTitle1" required>
+                        <input type="text" name="CcourseTitle2" required>
+                      </div>
+                      <div class="inputGroup">
+                        <label for="unit">UNIT:</label>
+                        <input type="text" name="Cunit1" required>
+                        <input type="text" name="Cunit2" required>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </label>
+      </fieldset>
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <script>
+      function redirectToAnotherSection() {
+          var form = document.querySelector('form');
+          var formData = new FormData(form);
+  
+          fetch(form.action, {
+              method: 'POST',
+              body: formData,
+          })
+          .then(response => {
+              console.log('Response status:', response.status);
+              if (response.ok) {
+                  window.location.href = 'status.html';
+              } else {
+                  console.error('Form submission failed');
+              }
+          })
+          .catch(error => {
+              console.error('Error during form submission:', error);
+          });
+  
+          return false;
+      }
+
+      function redirectToAnotherSection() {
+        var form = document.querySelector('form');
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            console.log('Response status:', response.status);
+            if (response.ok) {
+                window.location.href = 'status.html';
+            } else {
+                console.error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error during form submission:', error);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const courseActionFieldset = document.getElementById('courseActionFieldset');
+        const forms = document.querySelectorAll('.formContainer');
+
+        courseActionFieldset.addEventListener('click', function () {
+            const selectedValue = document.querySelector('input[name="courseAction"]:checked').value;
+
+            forms.forEach(form => form.classList.add('hidden'));
+
+            const selectedForm = document.getElementById(`${selectedValue}Form`);
+            if (selectedForm) {
+                selectedForm.classList.remove('hidden');
+            }
+        });
+    });
+  
+      document.addEventListener('DOMContentLoaded', function () {
+          const courseActionFieldset = document.getElementById('courseActionFieldset');
+          const forms = document.querySelectorAll('.formContainer');
+  
+          courseActionFieldset.addEventListener('click', function () {
+              const selectedValue = document.querySelector('input[name="courseAction"]:checked').value;
+  
+              forms.forEach(form => form.classList.add('hidden'));
+  
+              const selectedForm = document.getElementById(`${selectedValue}Form`);
+              if (selectedForm) {
+                  selectedForm.classList.remove('hidden');
+              }
+          });
+      });
+  </script>
+</body>
+</html>

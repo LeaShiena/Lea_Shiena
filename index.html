@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP-OUS Application for Change of Enrollment</title>
+    <link rel="stylesheet" href="index.css"> 
+    <script>
+        function redirectToAnotherSection() {
+            window.location.href = 'form.html'; 
+        }
+    </script>
+
+</head>
+<body>
+
+    <header>
+        <img src="OUS LOGO.png" alt="OUS LOGO">
+        <div>
+            <h1>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h1>
+            <h2>Open University System</h2>
+        </div>
+    </header>
+
+    <div id="h3">
+        <h3>APPLICATION FOR CHANGE OF ENROLLMENT</h3>
+        <div id="content">
+            <div id="login-box" >
+                <form id="login-form" onsubmit="redirectToAnotherSection(); return false;">  
+                    <h4>Enter your SIS credentials</h4>
+                    <label for="Student ID">Student ID:</label>
+                    <input type="text" id="Student ID" name="Student ID" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Proceed</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>4th Floor NALLRC Bldg. PUP A. Mabini Campus, Anonas Street, Sta. Mesa, Manila ; Phone (Direct Line) 331726; (Trunk Line) 335-1777/87 local 325; 
+        </p>
+        <p>Website: www.pup.edu.ph email: ousregistrar@pup.edu.ph</p>
+    </footer>
+
+</body>
+</html>
